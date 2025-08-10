@@ -3,12 +3,12 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 import "./index.css";
-import ReownProvider from './ReownProvider.jsx';
+import { AppKitProvider } from './appKitConfig.jsx';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <ReownProvider>
+    <AppKitProvider>
         <App />  
-    </ReownProvider> 
+    </AppKitProvider> 
   </React.StrictMode>
 );
