@@ -1,14 +1,12 @@
 // src/components/DonatePanel.jsx
 import React, { useState, useEffect } from "react";
 import { useAccount, useSendTransaction } from "wagmi";
-import { useAppKit } from "@reown/appkit/react";
 import { parseEther } from "viem";
 
 const DEV_WALLET = "0x7D8c25784C9B28B525BA085283efe01C81830F3b"; // Replace with actual dev wallet address
 const LIQUIDITY_WALLET = "0x198F7C84CC7E3485E325734aFAE0F270e4e80515"; // Replace with actual liquidity wallet address
 
 export default function DonatePanel() {
-  const { open } = useAppKit();
   const { address, isConnected } = useAccount();
 
   const [amountEth, setAmountEth] = useState("");
@@ -38,10 +36,12 @@ export default function DonatePanel() {
     setTxStatus(null);
     setTxError("");
 
-    if (!isConnected) {
-      open();
-      return;
-    }
+          {!isConnected && (
+        <div className="flex justify-center">
+          <appkit-button />
+        </div>
+      )}
+
 
     if (!amountEth || isNaN(amountEth) || Number(amountEth) <= 0) {
       setTxError("Please enter a valid donation amount in ETH.");

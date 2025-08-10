@@ -113,6 +113,17 @@ export default function HomePage() {
   return (
     <div className="bg-gray-900 text-white min-h-screen p-6">
       <div className="max-w-5xl mx-auto">
+
+  {/* Claim Button */}
+  <div className="text-center mt-6 mb-10">
+    <Link
+      to="/claim"
+      className="inline-block bg-green-600 hover:bg-green-700 text-white font-semibold px-6 py-3 rounded-lg shadow-lg transition"
+    >
+      CLAIM YOUR USDebtCoin!
+    </Link>
+  </div>
+
         <header className="text-center mb-8">
           <h1 className="text-4xl font-bold">USDebtCoin — Live Overview</h1>
           <p className="text-gray-300 mt-2">
