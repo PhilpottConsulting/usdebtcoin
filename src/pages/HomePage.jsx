@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { createPublicClient, http } from "viem";
 import { mainnet } from "viem/chains";
+import { useAppKit } from "@reown/appkit/react";
 
 /**
  * CONFIG - edit as needed
@@ -120,7 +121,7 @@ export default function HomePage() {
       to="/claim"
       className="inline-block bg-green-600 hover:bg-green-700 text-white font-semibold px-6 py-3 rounded-lg shadow-lg transition"
     >
-      CLAIM YOUR USDebtCoin!
+      CLAIM YOUR USDebtCoin Today!
     </Link>
   </div>
 
