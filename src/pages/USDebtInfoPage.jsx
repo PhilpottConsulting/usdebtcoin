@@ -13,9 +13,9 @@ export default function USDebtInfoPage() {
       {/* Distinct Header Bar */}
       <header className="bg-gray-900 text-white py-6 shadow-md">
         <div className="max-w-7xl mx-auto px-6 text-center">
-          <h1 className="text-4xl font-extrabold tracking-tight">US Debt Data Information</h1>
+          <h1 className="text-4xl font-extrabold tracking-tight">United States "Debt"</h1>
           <p className="mt-2 text-gray-300 max-w-2xl mx-auto">
-            Explore U.S. debt trends, net position, and the ~$4T accrued gap rarely covered in the media.
+            Explore U.S. debt trends vs US net position, and the ~$4.5T accrued gap rarely covered in the media.
           </p>
         </div>
       </header>
@@ -28,8 +28,9 @@ export default function USDebtInfoPage() {
           <div className="space-y-4">
             <h2 className="text-2xl font-semibold text-gray-900">Debt Data Overview</h2>
             <p className="text-gray-700">
-              Debt has risen consistently while the net position remains negative — the gap reflects
-              the ~$4T accrual often overlooked.
+              The Debt Reported has historically tracked the US "net postion" fairly well, with a net position higher than the reported debt as recently as 2020. 
+              However, in the past 5 years, the gap between the figures has widened signifigantly.  This is real growth in US liabilities, owed to real people in the US.  Veterans and other federal employes.
+              This widening ~$4.5T shouldn't be ignored in our debt discussions and thus we have chosen to track the US Net Position, rather than the public facing debt.
             </p>
           </div>
 
@@ -81,7 +82,8 @@ export default function USDebtInfoPage() {
           <div className="space-y-4">
             <h2 className="text-2xl font-semibold text-gray-900">Debt vs Net Position</h2>
             <p className="text-gray-700">
-              While GDP expanded, the net position fell further — showing the widening structural gap.
+              We all know the US National Debt is a bit out of control, but there is worse news.  The US Net Position has declined significantly faster than the more often reported Public Debt.
+              This means our real liabilities is sort of growing faster than we are telling ourselves and that can create dangerous situations and unknown consequences.
             </p>
           </div>
           <div className="space-y-2">
@@ -106,8 +108,7 @@ export default function USDebtInfoPage() {
           <div className="space-y-4">
             <h2 className="text-2xl font-semibold text-gray-900">Accrued Debt Difference</h2>
             <p className="text-gray-700">
-              The ~$4T in accrued obligations is not tracked in headline debt figures — DEBT coin highlights
-              this transparency gap.
+              Although the primary function of USDebtCoin is to explain the debt in terms of what one US "person" owes (about $117,000 in 2024), we also want to highlight the ~$4.5T increase in obligations on the balance sheet.
             </p>
           </div>
           <div className="space-y-2">

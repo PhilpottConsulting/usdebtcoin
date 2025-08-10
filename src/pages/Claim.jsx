@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useAccount, useReadContract, useWriteContract } from "wagmi";
+import { Link } from "react-router-dom";
 
 const CONTRACT_ADDRESS = "0xF9744F470247B695A31C7dca737612aCB8Db8512";
 const ABI = [
@@ -196,12 +197,14 @@ export default function Claim() {
             </a>
 
             {/* Donate page link */}
-            <a
+            <Link
               className="px-4 py-2 rounded-lg bg-green-600 text-white hover:bg-green-700"
-              href="/donate"
+              to="/donate"
             >
-              Donate to Liquidity or Tip our Developers!
-            </a>
+            Donate to Liquidity or Tip our Developers!
+            </Link>     
+            
+          
           </div>
         </div>
       </div>
