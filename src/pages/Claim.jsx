@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { useAccount, useReadContract, useWriteContract } from "wagmi";
 import { Link } from "react-router-dom";
+import { useSigner } from "wagmi";
+
+
 
 const CONTRACT_ADDRESS = "0xF9744F470247B695A31C7dca737612aCB8Db8512";
 const ABI = [
@@ -10,6 +13,8 @@ const ABI = [
 
 export default function Claim() {
   const { address, isConnected } = useAccount();
+
+  const {data: signer} = useSigner();
 
   const [hasClaimed, setHasClaimed] = useState(false);
   const [txError, setTxError] = useState(null);
@@ -66,6 +71,11 @@ export default function Claim() {
       setTxError("Connect your wallet first.");
       return;
     }
+
+    if (!signer) {
+      setTxError("No signer available. Please check your wallet connection.");
+      return;
+    }
     if (hasClaimed) {
       setTxError("Address has already claimed.");
       return;
@@ -76,6 +86,7 @@ export default function Claim() {
       abi: ABI,
       functionName: "claim",
       args: [],
+      signer: signer,
     });
   };
 
