@@ -4,8 +4,20 @@ import { Link } from "react-router-dom";
 
 const CONTRACT_ADDRESS = "0xF9744F470247B695A31C7dca737612aCB8Db8512";
 const ABI = [
-  "function claim() external",
-  "function hasClaimed(address) view returns (bool)",
+  {
+    inputs: [],
+    name: "claim",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function",
+  },
+  {
+    inputs: [{ internalType: "address", name: "", type: "address" }],
+    name: "hasClaimed",
+    outputs: [{ internalType: "bool", name: "", type: "bool" }],
+    stateMutability: "view",
+    type: "function",
+  },
 ];
 
 export default function Claim() {
